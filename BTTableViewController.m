@@ -54,6 +54,7 @@
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
     if (section == 0) {
+        
         return 2;
     }
     else if (section == 1) {
@@ -73,12 +74,15 @@
     // Configure the cell...
     if (indexPath.section == 0) {
         cell.textLabel.text = @"Section 0";
+        cell.backgroundColor = [UIColor redColor];
     }
     else if (indexPath.section == 1) {
         cell.textLabel.text = @"Section 1";
+        cell.backgroundColor = [UIColor blueColor];
     }
     else {
         cell.textLabel.text = [NSString stringWithFormat:@"Row %i", indexPath.row];
+        cell.backgroundColor = [UIColor yellowColor];
     }
     
     return cell;
